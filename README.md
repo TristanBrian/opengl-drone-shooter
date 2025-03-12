@@ -65,7 +65,7 @@ The bounding box of the enemy does not cover the whole drone, as can be seen in 
 2. Clone this Repository
 
     ```bash
-    git clone https://github.com/EtoileScintillante/opengl-drone-shooter.git
+    git clone https://github.com/TristanBrian/opengl-drone-shooter
     cd opengl-drone-shooter
     ```
 
