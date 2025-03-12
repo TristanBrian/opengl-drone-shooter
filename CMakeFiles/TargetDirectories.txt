@@ -1,0 +1,3 @@
+/home/tristan/Documents/Repos/opengl-drone-shooter-master/CMakeFiles/Drone-Shooter.dir
+/home/tristan/Documents/Repos/opengl-drone-shooter-master/CMakeFiles/edit_cache.dir
+/home/tristan/Documents/Repos/opengl-drone-shooter-master/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,39 @@
+name: Build-macOS-arm64
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-macos:
+    runs-on: macos-14
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Homebrew
+      run: |
+        if ! command -v brew &> /dev/null; then
+          echo "Homebrew not found, installing..."
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        else
+          echo "Homebrew is already installed."
+        fi
+
+    - name: Install Dependencies
+      run: |
+        brew update
+        brew install cmake glfw assimp freetype
+
+    - name: Set up CMake
+      run: |
+        mkdir -p build
+        cd build
+        cmake ..
+
+    - name: Build project
+      run: |
+        cd build
+        cmake --build .
